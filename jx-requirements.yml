@@ -15,8 +15,8 @@ cluster:
   provider: kubernetes
 environments:
 - ingress:
-    domain: jx.futurete.ch
-    externalDNS: true
+    domain: 51.159.74.222.nip.io
+    externalDNS: false
     namespaceSubDomain: -jx.
     tls:
       email: ""
