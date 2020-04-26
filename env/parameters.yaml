@@ -1,0 +1,10 @@
+adminUser:
+  password: local:foo/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: shteou@gmail.com
+  token: local:foo/pipelineUser:token
+  username: shteou
+prow:
+  hmacToken: local:foo/prow:hmacToken
