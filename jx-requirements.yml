@@ -16,7 +16,7 @@ cluster:
   registry: rg.fr-par.scw.cloud/foobar
 environments:
 - ingress:
-    domain: jx.futurete.ch
+    domain: cd.futurete.ch
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
@@ -47,7 +47,7 @@ environments:
   repository: environment-foo-production
 gitops: true
 ingress:
-  domain: jx.futurete.ch
+  domain: cd.futurete.ch
   externalDNS: false
   namespaceSubDomain: -jx.
   tls:
