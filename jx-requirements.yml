@@ -15,7 +15,7 @@ cluster:
   provider: kubernetes
 environments:
 - ingress:
-    domain: 51.159.74.222.nip.io
+    domain: jx.futurete.ch
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
@@ -46,7 +46,7 @@ environments:
   repository: environment-foo-production
 gitops: true
 ingress:
-  domain: 51.159.74.222.nip.io
+  domain: jx.futurete.ch
   externalDNS: false
   namespaceSubDomain: -jx.
   tls:
