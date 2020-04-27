@@ -20,29 +20,29 @@ environments:
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
-      email: ""
-      enabled: false
-      production: false
+      email: "shteou@gmail.com"
+      enabled: true
+      production: true
   key: dev
   repository: environment-foo-dev
 - ingress:
-    domain: ""
+    domain: cd.futurete.ch
     externalDNS: false
-    namespaceSubDomain: ""
+    namespaceSubDomain: -jx-staging.
     tls:
-      email: ""
-      enabled: false
-      production: false
+      email: "shteou@gmail.com"
+      enabled: true
+      production: true
   key: staging
   repository: environment-foo-staging
 - ingress:
-    domain: ""
+    domain: cd.futurete.ch
     externalDNS: false
-    namespaceSubDomain: ""
+    namespaceSubDomain: -jx-production.
     tls:
-      email: ""
-      enabled: false
-      production: false
+      email: "shteou@gmail.com"
+      enabled: true
+      production: true
   key: production
   repository: environment-foo-production
 gitops: true
@@ -51,9 +51,9 @@ ingress:
   externalDNS: false
   namespaceSubDomain: -jx.
   tls:
-    email: ""
-    enabled: false
-    production: false
+    email: "shteou@gmail.com"
+    enabled: true
+    production: true
 kaniko: true
 repository: nexus
 secretStorage: local
