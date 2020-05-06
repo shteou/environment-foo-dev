@@ -1,0 +1,126 @@
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-credential-initializer-mf2rl[0m
+{"level":"info","ts":1588724673.3835108,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1588724673.3844502,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-b8rr7[0m
+{"level":"info","ts":1588724674.1521957,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1588724674.1545668,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-git-source-shteou-environment-foo-dev-mast-sszp4-pht5v[0m
+{"level":"info","ts":1588724687.2500727,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1588724688.618642,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/******/environment-foo-dev.git @ v0.0.4 in path /workspace/source"}
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:a7af9b2413fa755095801a9cf05506f10335dfcf
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
+Git configured for user: jenkins-x-bot and email jenkins-x@googlegroups.com
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
+** boot has only been validated on GKE and EKS, we'd love feedback and contributions for other Kubernetes providers
+Running in Batch Mode, execution will continue
+writing the following to the OWNERS file for the development environment repository:
+approvers:
+- ******
+reviewers:
+- ******
+Verifying the kubernetes cluster before we try to boot Jenkins X in namespace: **
+Trying to lazily create any missing resources to get the current cluster ready to boot Jenkins X
+Verifying Ingress...
+
+Using namespace '**' from context named '' on server ''.
+
+Verifying the CLI packages using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.434
+using version 2.1.10 of **
+CLI packages kubectl, git, helm seem to be setup correctly
+NAME               VERSION
+**                 2.1.10
+Kubernetes cluster v1.15.11
+kubectl            v1.16.0
+helm client        2.14.3
+git                2.21.1
+
+Verifying Storage...
+Storage configuration looks good
+
+Helm installed and configured
+Ensuring Helm chart repository https://storage.googleapis.com/chartmuseum.jenkins-x.io is configured
+Cluster looks good, you are ready to '** boot' now!
+
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-install-jx-crds[0m
+Jenkins X CRDs upgraded with success
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-install-velero[0m
+Modified file /workspace/source/systems/velero/Chart.yaml to set the chart to version 2
+creating the lock configmap **-lock-velero
+lock configmap **-lock-velero created
+Verifying the helm requirements versions in dir: . using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.434
+cleaning the lock configmap **-lock-velero
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-install-velero-backups[0m
+Modified file /workspace/source/systems/velero-backups/Chart.yaml to set the chart to version 2
+creating the lock configmap **-lock-velero
+lock configmap **-lock-velero created
+Ignoring templates/default-backup.yaml
+No requirements file: /tmp/**-helm-apply-839054922/velero-backups/requirements.yaml so not checking for missing versions
+cleaning the lock configmap **-lock-velero
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-install-nginx-controller[0m
+Modified file /workspace/source/systems/**ing/Chart.yaml to set the chart to version 2
+creating the lock configmap **-lock-kube-system
+lock configmap **-lock-kube-system created
+Verifying the helm requirements versions in dir: . using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.434
+
+cleaning the lock configmap **-lock-kube-system
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-create-install-values[0m
+WARNING: Note that we have only tested TLS support on Google Container Engine with external-dns so far. This may not work!
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-install-external-dns[0m
+Modified file /workspace/source/systems/external-dns/Chart.yaml to set the chart to version 2
+creating the lock configmap **-lock-**
+lock configmap **-lock-** created
+Verifying the helm requirements versions in dir: . using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.434
+Adding missing Helm repo: charts.bitnami.com https://charts.bitnami.com/bitnami
+Successfully added Helm repository charts.bitnami.com.
+cleaning the lock configmap **-lock-**
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-install-cert-manager-crds[0m
+customresourcedefinition.apiextensions.k8s.io/challenges.acme.cert-manager.io configured
+customresourcedefinition.apiextensions.k8s.io/orders.acme.cert-manager.io configured
+customresourcedefinition.apiextensions.k8s.io/certificaterequests.cert-manager.io configured
+customresourcedefinition.apiextensions.k8s.io/certificates.cert-manager.io configured
+customresourcedefinition.apiextensions.k8s.io/clusterissuers.cert-manager.io configured
+customresourcedefinition.apiextensions.k8s.io/issuers.cert-manager.io configured
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-install-cert-manager[0m
+Modified file /workspace/source/systems/cm/Chart.yaml to set the chart to version 2
+creating the lock configmap **-lock-cert-manager
+lock configmap **-lock-cert-manager created
+Verifying the helm requirements versions in dir: . using version stream URL: https://github.com/jenkins-x/jenkins-x-versions.git and git ref: v1.0.434
+Adding missing Helm repo: charts.jetstack.io https://charts.jetstack.io
+Successfully added Helm repository charts.jetstack.io.
+
+
+cleaning the lock configmap **-lock-cert-manager
+
+Showing logs for build [32mshteou-environment-foo-dev-mast-sszp4-2[0m stage [32mrelease[0m and container [32mstep-install-acme-issuer-and-certificate[0m
+Modified file /workspace/source/systems/acme/Chart.yaml to set the chart to version 2
+creating the lock configmap **-lock-**
+lock configmap **-lock-** created
+Ignoring templates/cert-manager-prod-certificate.yaml
+Ignoring templates/cert-manager-prod-issuer.yaml
+Ignoring templates/cert-manager-staging-certificate.yaml
+Ignoring templates/cert-manager-staging-issuer.yaml
+No requirements file: /tmp/**-helm-apply-380484162/acme/requirements.yaml so not checking for missing versions
+cleaning the lock configmap **-lock-**
+error: upgrading helm chart '.': failed to run 'kubectl apply --recursive -f /tmp/helm-template-workdir-421091001/acme/output/namespaces/** -l jenkins.io/chart-release=acme --namespace ** --wait --validate=false' command in directory '/tmp/**-helm-apply-380484162/acme', output: 'certificate.cert-manager.io/tls-cd-futurete-ch-p created
+The Issuer "letsencrypt-prod" is invalid: []: Invalid value: map[string]interface **{"apiVersion":"cert-manager.io/v1alpha2", "kind":"Issuer", "metadata":map[string]interface **{"annotations":map[string]interface **{"jenkins.io/chart":"acme", "jenkins.io/chart-app-version":"0.0.4", "kubectl.kubernetes.io/last-applied-configuration":"{\"apiVersion\":\"cert-manager.io/v1alpha2\",\"kind\":\"Issuer\",\"metadata\":{\"annotations\":{\"jenkins.io/chart\":\"acme\",\"jenkins.io/chart-app-version\":\"0.0.4\"},\"labels\":{\"jenkins.io/chart-release\":\"acme\",\"jenkins.io/namespace\":\"**\",\"jenkins.io/version\":\"2\"},\"name\":\"letsencrypt-prod\",\"namespace\":\"**\"},\"spec\":{\"acme\":{\"email\":\"******@gmail.com\",\"privateKeySecretRef\":{\"name\":\"letsencrypt-prod\"},\"server\":\"https://acme-v02.api.letsencrypt.org/directory\",\"solvers\":[{\"dns01\":null,\"selector\":{\"dnsNames\":[\"*.cd.futurete.ch\",\"cd.futurete.ch\"]}}]}}}\n"}, "creationTimestamp":"2020-05-06T00:27:25Z", "generation":1, "labels":map[string]interface **{"jenkins.io/chart-release":"acme", "jenkins.io/namespace":"**", "jenkins.io/version":"2"}, "name":"letsencrypt-prod", "namespace":"**", "uid":"eec1146e-7be9-4d91-b4a3-17b02dfda02c"}, "spec":map[string]interface **{"acme":map[string]interface **{"email":"******@gmail.com", "privateKeySecretRef":map[string]interface **{"name":"letsencrypt-prod"}, "server":"https://acme-v02.api.letsencrypt.org/directory", "solvers":[]interface **{map[string]interface **{"dns01":interface **(nil), "selector":map[string]interface **{"dnsNames":[]interface **{"*.cd.futurete.ch", "cd.futurete.ch"}}}}}}}: validation failure list:
+spec.acme.solvers.dns01 in body must be of type object: "null"'
+[31m
+Pipeline failed on stage 'release' : container 'step-install-acme-issuer-and-certificate'. The execution of the pipeline has stopped.[0m
