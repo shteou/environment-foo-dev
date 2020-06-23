@@ -25,16 +25,16 @@ environments:
       production: true
   key: dev
   repository: environment-foo-dev
-- ingress:
-    domain: cd.futurete.ch
-    externalDNS: false
-    namespaceSubDomain: -jx-staging.
-    tls:
-      email: "shteou@gmail.com"
-      enabled: true
-      production: true
-  key: staging
-  repository: environment-foo-staging
+#- ingress:
+#    domain: cd.futurete.ch
+#    externalDNS: false
+#    namespaceSubDomain: -jx-staging.
+#    tls:
+#      email: "shteou@gmail.com"
+#      enabled: true
+#      production: true
+#  key: staging
+#  repository: environment-foo-staging
 - ingress:
     domain: cd.futurete.ch
     externalDNS: false
