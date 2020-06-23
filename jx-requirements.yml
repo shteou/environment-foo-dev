@@ -20,7 +20,7 @@ environments:
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
-      email: "shteou@gmail.com"
+      email: shteou@gmail.com
       enabled: true
       production: true
   key: dev
@@ -30,7 +30,7 @@ environments:
     externalDNS: false
     namespaceSubDomain: -jx-staging.
     tls:
-      email: "shteou@gmail.com"
+      email: shteou@gmail.com
       enabled: true
       production: true
   key: staging
@@ -40,7 +40,7 @@ environments:
     externalDNS: false
     namespaceSubDomain: -jx-production.
     tls:
-      email: "shteou@gmail.com"
+      email: shteou@gmail.com
       enabled: true
       production: true
   key: production
@@ -51,7 +51,7 @@ ingress:
   externalDNS: false
   namespaceSubDomain: -jx.
   tls:
-    email: "shteou@gmail.com"
+    email: shteou@gmail.com
     enabled: true
     production: true
 kaniko: true
