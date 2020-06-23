@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: shteou
+  repo: test-service
+  url: https://github.com/shteou/test-service.git
+  version: ""
+  versionURL: ""
